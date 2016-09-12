@@ -22,7 +22,7 @@
         },
         
 		  "parameters": {
-			"existingVMSSName": {"value": "[concat('fl2', padLeft(copyindex(), 2, '0'))]"},
+			"existingVMSSName": {"value": "[concat('fl3', padLeft(copyindex(), 2, '0'))]"},
 			"newCapacity": {"value": 100},
 			"vmSku": {"value": "Standard_F4"} 
 		
