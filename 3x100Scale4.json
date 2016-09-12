@@ -1,0 +1,33 @@
+{
+  "$schema":"http://schema.management.azure.com/schemas/2015-01-01-preview/deploymentTemplate.json",
+  "contentVersion":"1.0.0.0",
+  "parameters":{},
+  "variables":{},
+  "resources":[
+    
+    {
+      "name":"[concat('clusterSet', copyindex())]",
+      "type":"Microsoft.Resources/deployments",
+      "apiVersion":"2015-11-01",
+      "copy":{
+        "name":"deploymentLoop",
+        "count": 3
+      },
+      "dependsOn":[],
+      "properties":{
+        "mode":"Incremental",
+        "templateLink":{
+          "uri":"https://raw.githubusercontent.com/richardspitz/azure-quickstart-templates/master/201-vmss-scale-existing/azuredeploy.json",
+          "contentVersion":"1.0.0.0"
+        },
+        
+		  "parameters": {
+			"existingVMSSName": {"value": "[concat('fl4', padLeft(copyindex(), 2, '0'))]"},
+			"newCapacity": {"value": 0},
+			"vmSku": {"value": "Standard_F4"} 
+		
+		}
+      }
+    }
+  ]
+}
