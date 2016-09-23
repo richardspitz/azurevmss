@@ -44,7 +44,7 @@
     "newStorageAccountPrefix":"[concat(variables('namingInfix'), 'sa')]",
     "subnetName":"subnet",
     "subnetPrefix":"10.0.0.0/16",
-    "storageAccountType":"Standard_LRS",
+    "storageAccountType":"Premium_LRS",
     "baseTemplateUri":"https://raw.githubusercontent.com/richardspitz/azurevmms/master/baseoppremstor.json"
   },
   "resources":[
