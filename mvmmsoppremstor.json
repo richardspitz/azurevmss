@@ -45,7 +45,7 @@
     "subnetName":"subnet",
     "subnetPrefix":"10.0.0.0/16",
     "storageAccountType":"Premium_LRS",
-    "baseTemplateUri":"https://raw.githubusercontent.com/richardspitz/azurevmms/master/baseoppremstor.json"
+    "baseTemplateUri":"https://raw.githubusercontent.com/richardspitz/azurevmss/master/baseoppremstor.json"
   },
   "resources":[
     {
